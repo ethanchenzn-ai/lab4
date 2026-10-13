@@ -1,18 +1,35 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Study Helper</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>How do you feel?</h1>
+  <main>
+    <h1>Study Assistant</h1>
+    <p>How do you feel before we jump into studying?</p>
 
-  <button onclick="check('tired')">Tired</button>
-  <button onclick="check('okay')">Okay</button>
-  <button onclick="check('ready')">Ready</button>
+    <!-- Mood buttons -->
+    <div>
+      <button onclick="check('tired')">Tired</button>
+      <button onclick="check('okay')">Okay</button>
+      <button onclick="check('ready')">Ready</button>
+      <button onclick="check('deadline')">Exam / Assignment Due</button>
+    </div>
 
-  <p id="result">Click a button.</p>
+    <!-- Advice changes based on the mood -->
+    <section id="advice" aria-live="polite">
+      <h2 id="status">Choose your mood</h2>
+      <p id="result">Click a button to get a study suggestion.</p>
+    </section>
+
+    <p id="count">Choices made: 0</p>
+    <button onclick="reset()">Reset</button>
+  </main>
 
   <script src="script.js"></script>
 </body>
